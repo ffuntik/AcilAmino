@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="acilkarnitinai.AnaliciuNormuController"
+            prefWidth="600" prefHeight="400">
+
+<content>
+    <BorderPane>
+        <top>
+            <Label text = "Norint išsaugoti pakeistas analitės normos ribas, spauskite Save. Po visų pakeitimų paspauskite OK. Norint pridėti naują analitę, pasinaudokite betkurios analitės redagavimo langu, pakeitus analitės pavadinimą. Netyčia pasdaudus Delete arba Save, paspauskite Cancel, ir pakeitimai nebus išsaugoti."
+                   wrapText="true">
+            <padding>
+                <Insets bottom="15"/>
+
+            </padding>
+            </Label>
+
+        </top>
+        <left>
+            <ListView fx:id = "analiciuListView" prefWidth="100"/>
+        </left>
+        <center>
+            <GridPane vgap="10" hgap="10" alignment="TOP_CENTER">
+                <padding>
+                    <Insets left="10" right="10" top="10" bottom="10"/>
+                </padding>
+
+                <Label text="Analitės pavadinimas" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1" prefWidth="140"/>
+                <TextField fx:id = "analitesName" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="2" prefWidth="140"/>
+            <Label text="Analitės min" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="1" prefWidth="140"/>
+            <TextField fx:id = "analitesMin" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2" prefWidth="140"/>
+            <Label text ="Analitės max" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="1" prefWidth="140"/>
+            <TextField fx:id="analitesMax" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="2" prefWidth="140"/>
+            <Label text="Analitės tipas" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="1" prefWidth="140"/>
+            <ComboBox fx:id="analitesTipoComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2" prefWidth="140"/>
+                <Button fx:id = "saveButton" text = "Save" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="1" prefWidth="70" onAction="#saveAnalite"/>
+                <Button fx:id = "deleteButton" text = "Delete" GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.columnSpan="1" prefWidth="70" onAction="#deleteAnalite"/>
+
+            </GridPane>
+        </center>
+    </BorderPane>
+
+</content>
+
+</DialogPane>

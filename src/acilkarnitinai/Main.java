@@ -1,0 +1,32 @@
+package acilkarnitinai;
+
+import acilkarnitinai.calculations.AnaliciuSarasas;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("mainwindow.fxml"));
+        primaryStage.setTitle("Acilkarnitinai");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void init() {
+        try {
+            AnaliciuSarasas.getInstance().nuskaitytiAnaliciuSarasa();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
