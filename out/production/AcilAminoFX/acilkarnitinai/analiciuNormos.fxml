@@ -39,7 +39,6 @@
             <ComboBox fx:id="analitesTipoComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2" prefWidth="140"/>
                 <Button fx:id = "saveButton" text = "Save" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="1" prefWidth="70" onAction="#saveAnalite"/>
                 <Button fx:id = "deleteButton" text = "Delete" GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.columnSpan="1" prefWidth="70" onAction="#deleteAnalite"/>
-
             </GridPane>
         </center>
     </BorderPane>
